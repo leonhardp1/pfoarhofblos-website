@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pfoarhofblos - Steirische Volksmusik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.png" alt="Pfoarhofblos Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Pfoarhofblos</h1>
+                        <p>Steirische Volksmusik</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">Über uns</a>
+                    <a href="#events">Musikanten</a>
+                    <a href="#contact">Kontakt</a>
+                </nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="closeMobileMenu()">Home</a>
+        <a href="#about" onclick="closeMobileMenu()">Über uns</a>
+        <a href="#events" onclick="closeMobileMenu()">Auftritte</a>
+        <a href="#contact" onclick="closeMobileMenu()">Kontakt</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="band-photo.png" alt="Pfoarhofblos Band" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-logo">
+            </div>
+            <h1 class="hero-title">Pfoarhofblos</h1>
+            <p class="hero-subtitle">Authentische steirische Volksmusik aus dem Herzen der Steiermark</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">
+                    <span class="btn-icon">♪</span>
+                    Unsere Musik
+                </button>
+                <button class="btn btn-secondary">
+                    <span class="btn-icon">📅</span>
+                    Nächste Auftritte
+                </button>
+            </div>
+        </div>
+    </section>
+
+   <!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2>Über uns</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <div class="about-title">
+                    <span class="icon">👥</span>
+                    <span>Unsere Geschichte</span>
+                </div>
+
+                <p>Die Pfoarhofblos sind eine sechsköpfige Volksmusikgruppe aus der Steiermark, die sich der authentischen Pflege der traditionellen steirischen Volksmusik verschrieben hat. Mit viel Herzblut und Leidenschaft bringen wir die Melodien unserer Heimat zu den Menschen.</p>
+
+                <p>Unsere Musik ist geprägt von der Liebe zur Tradition, ohne dabei den Bezug zur Gegenwart zu verlieren. Mit Steirischer Harmonika, Gitarre, Tuba und weiteren traditionellen Instrumenten schaffen wir eine authentische Atmosphäre, die Jung und Alt begeistert.</p>
+
+                <p>Seit unserer Gründung haben wir uns zum Ziel gesetzt, die reiche musikalische Tradition der Steiermark lebendig zu halten und an die nächste Generation weiterzugeben. Dabei verbinden wir Respekt vor dem Ursprünglichen mit der Freude am gemeinsamen Musizieren.</p>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Mitglieder</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Authentisch</div>
+                    </div>
+                </div>
+
+                <div class="tradition-box">
+                    <h4>Unsere Philosophie</h4>
+                    <p>„Wir spielen nicht, um laut zu sein.
+Wir spielen, weil in jedem Ton ein Stück Leben steckt –
+weil eine Melodie oft mehr sagt als tausend Worte.
+Unsere Musik ist wie wir: ehrlich, handgemacht, geerdet.
+Zwischen Takt und Ton liegt Heimat,
+und in jedem Klang schwingt das Herz des Pfoarhofs mit.“
+– Pfoarhofblos</p>
+                </div>
+            </div>
+
+            <div class="about-visual">
+                <div class="band-illustration">
+                    <img src="band-illustration.png" alt="Pfoarhofblos Illustration" class="illustration-img">
+                </div>
+                
+                <div class="instruments-card">
+                    <h3>Unsere Instrumente</h3>
+                    <ul class="instruments-list">
+                        <li>Flügelhorn</li>
+                        <li>Flügelhorn</li>
+                        <li>Tuba</li>
+                        <li>Tenorhorn</li>
+                        <li>Stimme</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h4>Unsere Erfahrung</h4>
+                    <div class="experience-items">
+                        <div class="experience-item">
+                            <span class="exp-icon">🎪</span>
+                            <span>Über 20 Auftritte pro Jahr</span>
+                        </div>
+                        <div class="experience-item">
+                            <span class="exp-icon">🏔️</span>
+                            <span>Almfeste & Bergfeiern</span>
+                        </div>
+                        <div class="experience-item">
+                            <span class="exp-icon">💒</span>
+                            <span>Hochzeiten & Familienfeste</span>
+                        </div>
+                        <div class="experience-item">
+                            <span class="exp-icon">🎭</span>
+                            <span>Kulturelle Veranstaltungen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Band Members Section -->
+<section id="members" class="members">
+    <div class="container">
+        <div class="section-header">
+            <h2>Unsere Musikanten</h2>
+            <div class="section-divider"></div>
+            <p>Lernen Sie die Gesichter hinter der Musik kennen</p>
+        </div>
+
+        <div class="members-grid">
+            <!-- Member 1 - Werner Schachner -->
+            <div class="member-card" onclick="openModal('modal1')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/wernerSchachner.png" alt="Werner Schachner" class="member-photo">
+                        <div class="member-info">
+                            <h3>Werner Schachner</h3>
+                            <p>Bandleader & Flügelhorn</p>
+                            <div class="member-icon">🎺</div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Werner Schachner</h3>
+                            <p class="member-role">Bandleader & Flügelhorn</p>
+                            <p class="member-description">Werner führt die Pfoarhofblos mit Leidenschaft und seinem warmen Flügelhorn-Sound.</p>
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Leader</span>
+                                    <span class="stat-label">Position</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">500+</span>
+                                    <span class="stat-label">Auftritte</span>
+                                </div>
+                            </div>
+                            <button class="learn-more-btn">Mehr erfahren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 2 - Leonhard Perstling -->
+            <div class="member-card" onclick="openModal('modal2')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Leonhard Perstling" class="member-photo">
+                        <div class="member-info">
+                            <h3>Leonhard Perstling</h3>
+                            <p>Flügelhorn</p>
+                            <div class="member-icon">🎺</div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Leonhard Perstling</h3>
+                            <p class="member-role">Flügelhorn</p>
+                            <p class="member-description">Leonhard verzaubert mit seinem melodischen Flügelhorn-Spiel und schafft emotionale Momente.</p>
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Melodie</span>
+                                    <span class="stat-label">Spezialist</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">300+</span>
+                                    <span class="stat-label">Songs</span>
+                                </div>
+                            </div>
+                            <button class="learn-more-btn">Mehr erfahren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 3 - Karl Wohlvather -->
+            <div class="member-card" onclick="openModal('modal3')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Karl Wohlvather" class="member-photo">
+                        <div class="member-info">
+                            <h3>Karl Wohlvather</h3>
+                            <p>Tenorhorn</p>
+                            <div class="member-icon">🎷</div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Karl Wohlvather</h3>
+                            <p class="member-role">Tenorhorn</p>
+                            <p class="member-description">Karl sorgt mit seinem kraftvollen Tenorhorn für die harmonische Mitte unserer Musik.</p>
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Harmonie</span>
+                                    <span class="stat-label">Experte</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">20+</span>
+                                    <span class="stat-label">Jahre</span>
+                                </div>
+                            </div>
+                            <button class="learn-more-btn">Mehr erfahren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 4 - Gernot Schwaiger -->
+            <div class="member-card" onclick="openModal('modal4')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Gernot Schwaiger" class="member-photo">
+                        <div class="member-info">
+                            <h3>Gernot Schwaiger</h3>
+                            <p>Bass</p>
+                            <div class="member-icon">🎺</div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Gernot Schwaiger</h3>
+                            <p class="member-role">Bass</p>
+                            <p class="member-description">Gernot bildet mit seinem tiefen Bass das solide Fundament für unsere traditionelle Musik.</p>
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Fundament</span>
+                                    <span class="stat-label">Rolle</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">Tief</span>
+                                    <span class="stat-label">& Stark</span>
+                                </div>
+                            </div>
+                            <button class="learn-more-btn">Mehr erfahren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals für detaillierte Profile -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-body">
+            <img src="images/wernerSchachner.png" alt="Werner Schachner" class="modal-photo">
+            <div class="modal-info">
+                <h2>Werner Schachner</h2>
+                <p class="modal-role">Bandleader & Flügelhorn</p>
+                <p class="modal-bio">Werner Schachner ist der Bandleader der Pfoarhofblos und das Herz der Gruppe. Mit seinem warmen Flügelhorn-Sound führt er die Band durch jede Darbietung und sorgt dafür, dass die authentische steirische Volksmusik in ihrer schönsten Form erklingt. Seine Leidenschaft für die Tradition und sein musikalisches Gespür machen ihn zum perfekten Anführer.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Position:</strong> Bandleader & Flügelhorn
+                    </div>
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Steirermen san very good"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Führt die Band mit Herz und Seele
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Leonhard Perstling" class="modal-photo">
+            <div class="modal-info">
+                <h2>Leonhard Perstling</h2>
+                <p class="modal-role">Flügelhorn</p>
+                <p class="modal-bio">Leonhard Perstling verzaubert mit seinem melodischen Flügelhorn-Spiel das Publikum bei jedem Auftritt. Seine gefühlvollen Interpretationen traditioneller Stücke schaffen emotionale Momente, die lange in Erinnerung bleiben. Mit seiner musikalischen Sensibilität trägt er maßgeblich zum unverwechselbaren Sound der Pfoarhofblos bei.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Instrument:</strong> Flügelhorn
+                    </div>
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Edelweiß"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Meister der emotionalen Melodien
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Karl Wohlvather" class="modal-photo">
+            <div class="modal-info">
+                <h2>Karl Wohlvather</h2>
+                <p class="modal-role">Tenorhorn</p>
+                <p class="modal-bio">Karl Wohlvather sorgt mit seinem kraftvollen Tenorhorn für die harmonische Mitte der Pfoarhofblos. Seine präzisen und ausdrucksstarken Töne bilden die perfekte Brücke zwischen Melodie und Bass. Mit seiner langjährigen Erfahrung und seinem Gespür für Harmonie ist er ein unverzichtbarer Teil des Ensembles.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Instrument:</strong> Tenorhorn
+                    </div>
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Die Holzhackerbuam"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Harmonie-Spezialist der Band
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Gernot Schwaiger" class="modal-photo">
+            <div class="modal-info">
+                <h2>Gernot Schwaiger</h2>
+                <p class="modal-role">Bass</p>
+                <p class="modal-bio">Gernot Schwaiger bildet mit seinem tiefen, warmen Bass das solide Fundament der Pfoarhofblos. Seine präzisen und kraftvollen Töne geben jeder Melodie den nötigen Halt und sorgen für den charakteristischen Groove der Band. Ohne seinen Bass wäre die authentische steirische Volksmusik der Pfoarhofblos nicht denkbar.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Instrument:</strong> Bass
+                    </div>
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Böhmischer Traum"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Das rhythmische Fundament der Band
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals für detaillierte Profile -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Franz Harmonika" class="modal-photo">
+            <div class="modal-info">
+                <h2>Werner SChachner</h2>
+                <p class="modal-role">Bandleader & Flügelhorn</p>
+                <p class="modal-bio">Werner ist seit über 10 Jahren das Herz und die Seele der Pfoarhofblos. Mit seinem Flügelhorn verzaubert er das Publikum und führt die Band mit Leidenschaft und Erfahrung. Geboren und aufgewachsen in der Steiermark, lebt er die Tradition der Volksmusik wie kein anderer.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Gruß an Stabis"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Instrument seit:</strong> 1987
+                    </div>
+                    <div class="detail-item">
+                        <strong>Spruch:</strong> "Heid spuima moi wida a Moderns"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Maria Gitarre" class="modal-photo">
+            <div class="modal-info">
+                <h2>Maria Gitarre</h2>
+                <p class="modal-role">Gitarre & Gesang</p>
+                <p class="modal-bio">Maria bringt mit ihrer warmen, authentischen Stimme und ihrem virtuosen Gitarrenspiel eine besondere Note in die Band. Sie ist nicht nur eine begnadete Musikerin, sondern auch die kreative Kraft hinter vielen Arrangements der Pfoarhofblos.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Am Brunnen vor dem Tore"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Instrument seit:</strong> 2008
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Komponiert eigene Volksmusik-Arrangements
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Hans Tuba" class="modal-photo">
+            <div class="modal-info">
+                <h2>Hans Tuba</h2>
+                <p class="modal-role">Tuba & Bass</p>
+                <p class="modal-bio">Hans ist das solide Fundament der Pfoarhofblos. Mit seiner kraftvollen Tuba sorgt er für den tiefen, warmen Bass, der jeder Melodie den nötigen Halt gibt. Seine ruhige Art und sein präzises Spiel machen ihn zu einem unverzichtbaren Bandmitglied.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Die Holzhackerbuam"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Instrument seit:</strong> 2003
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Spielt auch Kontrabass und E-Bass
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Peter Trompete" class="modal-photo">
+            <div class="modal-info">
+                <h2>Peter Trompete</h2>
+                <p class="modal-role">Trompete & Flügelhorn</p>
+                <p class="modal-bio">Peters strahlende Trompetentöne sind das Markenzeichen vieler Pfoarhofblos-Auftritte. Mit seinem Flügelhorn zaubert er besonders emotionale Momente, die das Publikum zu Tränen rühren können. Seine Soli sind legendär in der steirischen Volksmusikszene.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Edelweiß"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Instrument seit:</strong> 2005
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Gewinner mehrerer Volksmusik-Wettbewerbe
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Klaus Klarinette" class="modal-photo">
+            <div class="modal-info">
+                <h2>Klaus Klarinette</h2>
+                <p class="modal-role">Klarinette & Saxophon</p>
+                <p class="modal-bio">Klaus ist der Virtuose der Holzblasinstrumente in der Band. Seine Klarinette singt wie ein Vogel, und sein Saxophon bringt manchmal einen Hauch von Jazz in die traditionelle Volksmusik. Er ist ein Meister der Improvisation und überrascht immer wieder mit neuen Ideen.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Der Vogelhändler"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Instrument seit:</strong> 2001
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Studierte Musik am Konservatorium
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal6')">&times;</span>
+        <div class="modal-body">
+            <img src="/placeholder.svg?height=200&width=200" alt="Stefan Schlagzeug" class="modal-photo">
+            <div class="modal-info">
+                <h2>Stefan Schlagzeug</h2>
+                <p class="modal-role">Schlagzeug & Percussion</p>
+                <p class="modal-bio">Stefan ist der jüngste in der Band, aber sein Rhythmusgefühl ist unübertroffen. Er hält die Band zusammen und sorgt dafür, dass jeder Walzer, jede Polka und jeder Ländler im perfekten Takt gespielt wird. Seine Energie ist ansteckend und bringt Schwung in jeden Auftritt.</p>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Lieblingsstück:</strong> "Böhmischer Traum"
+                    </div>
+                    <div class="detail-item">
+                        <strong>Instrument seit:</strong> 2011
+                    </div>
+                    <div class="detail-item">
+                        <strong>Besonderheit:</strong> Spielt auch Cajón und Bodhrán
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unsere Auftritte</h2>
+                <div class="section-divider"></div>
+                <p>Erleben Sie uns live bei verschiedenen Veranstaltungen in der Steiermark und darüber hinaus</p>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-header green">
+                        <h3>
+                            <span class="icon">📅</span>
+                            #PLACEHOLDER#
+                        </h3>
+                        <p>#PLACEHOLDER##PLACEHOLDER#</p>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-location">
+                            <span class="icon">📍</span>
+                            <span>#PLACEHOLDER#</span>
+                        </div>
+                        <p>#PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER#</p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-header amber">
+                        <h3>
+                            <span class="icon">📅</span>
+                        #PLACEHOLDER#
+                        </h3>
+                        <p>#PLACEHOLDER##PLACEHOLDER#</p>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-location">
+                            <span class="icon">📍</span>
+                            <span>#PLACEHOLDER##PLACEHOLDER#</span>
+                        </div>
+                        <p>#PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER#</p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-header mixed">
+                        <h3>
+                            <span class="icon">📅</span>
+                            #PLACEHOLDER#
+                        </h3>
+                        <p>#PLACEHOLDER##PLACEHOLDER#</p>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-location">
+                            <span class="icon">📍</span>
+                            <span>#PLACEHOLDER##PLACEHOLDER#</span>
+                        </div>
+                        <p>#PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER##PLACEHOLDER#</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events-cta">
+                <button class="btn btn-primary">
+                    <span class="btn-icon">📅</span>
+                    Alle Termine anzeigen
+                </button>
+            </div>
+        </div>
+    </section>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Kontakt</h2>
+            <div class="section-divider"></div>
+            <p>Haben Sie Interesse an einem Auftritt? Kontaktieren Sie uns gerne!</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Kontaktinformationen</h3>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon green">✉️</div>
+                        <div>
+                            <p class="contact-label">E-Mail</p>
+                            <p class="contact-value">info@pfoarhofblos.at</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon amber">📞</div>
+                        <div>
+                            <p class="contact-label">Telefon</p>
+                            <p class="contact-value">+43 0677 62800640</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon green">📍</div>
+                        <div>
+                            <p class="contact-label">Region</p>
+                            <p class="contact-value">Steiermark, Österreich</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-info">
+                    <h4>Buchungsanfragen</h4>
+                    <p>Wir spielen gerne bei Ihren Veranstaltungen:</p>
+                    <ul>
+                        <li>Dorffeste und Volksfeste</li>
+                        <li>Hochzeiten und Familienfeiern</li>
+                        <li>Firmenveranstaltungen</li>
+                        <li>Almfeste und Bergfeste</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <div class="form-header">
+                    <h3>Anfrage senden</h3>
+                    <p>Schreiben Sie uns eine Nachricht</p>
+                </div>
+
+                <form action="https://formsubmit.co/leonhard.perstling@gmail.com" method="POST" id="contactForm">
+                    <!-- Hidden fields -->
+                    <input type="hidden" name="_subject" value="Neue Anfrage von der Website!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- _next entfernt, damit keine Weiterleitung -->
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Vorname</label>
+                            <input type="text" id="firstName" name="Vorname" placeholder="Ihr Vorname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Nachname</label>
+                            <input type="text" id="lastName" name="Nachname" placeholder="Ihr Nachname" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="E-Mail" placeholder="ihre.email@beispiel.at" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon (optional)</label>
+                        <input type="tel" id="phone" name="Telefon" placeholder="+43 123 456 789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event">Art der Veranstaltung</label>
+                        <input type="text" id="event" name="Veranstaltung" placeholder="z.B. Hochzeit, Dorffest, Firmenfeier" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="Nachricht" placeholder="Erzählen Sie uns mehr über Ihre Veranstaltung..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-icon">✉️</span>
+                        Anfrage senden
+                    </button>
+                </form>
+
+                <!-- Success Message (versteckt) -->
+                <div id="successMessage" class="success-message" style="display:none; margin-top: 20px; padding: 15px; border: 1px solid #4CAF50; background-color: #dff0d8; color: #3c763d; border-radius: 5px;">
+                    <div class="success-content" style="display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <span class="success-icon" style="font-size: 1.5rem; margin-right: 10px;">✅</span>
+                            <span>Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.</span>
+                        </div>
+                        <button onclick="closeSuccessMessage()" style="background: transparent; border: none; font-size: 1.2rem; cursor: pointer;">✖️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Verhindert Seitenreload
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    successMessage.style.display = "block";  // Erfolgsmeldung zeigen
+                    form.reset();  // Formular zurücksetzen
+                } else {
+                    alert("Beim Senden ist ein Fehler aufgetreten.");
+                }
+            })
+            .catch(() => {
+                alert("Netzwerkfehler. Bitte versuchen Sie es später erneut.");
+            });
+        });
+
+        function closeSuccessMessage() {
+            successMessage.style.display = "none";
+        }
+    </script>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Pfoarhofblos Logo">
+                        <div>
+                            <h3>Pfoarhofblos</h3>
+                            <p>Steirische Volksmusik</p>
+                        </div>
+                    </div>
+                    <p>Authentische Volksmusik aus dem Herzen der Steiermark</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <div class="footer-contact">
+                        <p>info@pfoarhofblos.at</p>
+                        <p>+43 0677 62800640</p>
+                        <p>Steiermark, Österreich</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <div class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#about">Über uns</a>
+                        <a href="#events">Auftritte</a>
+                        <a href="#contact">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Pfoarhofblos. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+   <!-- Success Message -->
+<div id="successMessage" class="success-message" style="display:none;">
+    <div class="success-content">
+        <span class="success-icon">✅</span>
+        <p>Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.</p>
+        <button onclick="closeSuccessMessage()">Schließen</button>
+    </div>
+</div>
+
+</body>
+</html>
