@@ -1293,3 +1293,379 @@ html {
         max-width: 600px;
     }
 }
+/* Interactive Instrument Showcase */
+.instrument-showcase {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3a8a, #3730a3, #1e40af);
+    overflow: hidden;
+    padding: 5rem 0;
+}
+
+/* Parallax Background */
+.parallax-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background: url('/placeholder.svg?height=800&width=1200') no-repeat center;
+    background-size: cover;
+    opacity: 0.3;
+    animation: parallaxMove 20s ease-in-out infinite;
+}
+
+.parallax-mountains {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: url('/placeholder.svg?height=400&width=1200') no-repeat bottom center;
+    background-size: cover;
+    opacity: 0.6;
+    animation: parallaxMove 15s ease-in-out infinite reverse;
+}
+
+.parallax-clouds {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: url('/placeholder.svg?height=300&width=1200') no-repeat center;
+    background-size: cover;
+    opacity: 0.4;
+    animation: parallaxMove 25s ease-in-out infinite;
+}
+
+@keyframes parallaxMove {
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(-20px); }
+}
+
+/* Interactive Stage */
+.interactive-stage {
+    position: relative;
+    z-index: 10;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.stage-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.stage-lights {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    animation: stageLights 8s ease-in-out infinite;
+}
+
+@keyframes stageLights {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+}
+
+/* Instrument Items */
+.instrument-item {
+    position: relative;
+    display: inline-block;
+    margin: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    color: white;
+}
+
+.instrument-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
+}
+
+.instrument-glow {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+    border-radius: 1rem;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.instrument-item:hover .instrument-glow {
+    opacity: 0.3;
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+.instrument-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.instrument-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Sound Waves Animation */
+.sound-waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sound-waves::before,
+.sound-waves::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #ffd700;
+    border-radius: 50%;
+    animation: soundWave 1.5s ease-out infinite;
+}
+
+.sound-waves::after {
+    animation-delay: 0.5s;
+}
+
+@keyframes soundWave {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+}
+
+.instrument-item.playing .sound-waves {
+    opacity: 1;
+}
+
+/* Play All Button */
+.play-all-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.play-all-btn {
+    position: relative;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #1e3a8a;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.play-all-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+.btn-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.play-all-btn:hover .btn-glow {
+    opacity: 1;
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.play-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Volume Control */
+.volume-control {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.volume-icon {
+    color: white;
+    font-size: 1.25rem;
+}
+
+#volumeSlider {
+    width: 100px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ffd700;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Concert Countdown */
+.concert-countdown {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.concert-countdown h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ffd700;
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.countdown-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 0.5rem;
+    min-width: 80px;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-item label {
+    font-size: 0.875rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.next-concert {
+    font-size: 1.125rem;
+    color: #ffd700;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .instrument-item {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .countdown-display {
+        gap: 1rem;
+    }
+    
+    .countdown-item {
+        min-width: 60px;
+        padding: 0.75rem;
+    }
+    
+    .countdown-item span {
+        font-size: 1.5rem;
+    }
+}

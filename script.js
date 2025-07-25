@@ -261,3 +261,153 @@ document.addEventListener('keydown', function(event) {
         });
     }
 });
+
+// Interactive Instrument Showcase JavaScript
+let currentVolume = 0.5;
+let isPlayingAll = false;
+
+// Sound Effects (simuliert - in der echten Version würden Sie echte Audio-Dateien verwenden)
+const instrumentSounds = {
+    flugelhorn: { frequency: 440, duration: 1000 },
+    flugelhorn2: { frequency: 523, duration: 1000 },
+    tenorhorn: { frequency: 349, duration: 1200 },
+    bass: { frequency: 220, duration: 1500 }
+};
+
+// Web Audio API für Sound-Generierung
+let audioContext;
+
+function initAudio() {
+    if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    }
+}
+
+function playSound(instrument) {
+    initAudio();
+    
+    const instrumentElement = document.querySelector(`[onclick="playSound('${instrument}')"]`);
+    instrumentElement.classList.add('playing');
+    
+    // Sound-Effekt generieren
+    const sound = instrumentSounds[instrument];
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.setValueAtTime(sound.frequency, audioContext.currentTime);
+    oscillator.type = 'sine';
+    
+    gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+    gainNode.gain.linearRampToValueAtTime(currentVolume * 0.3, audioContext.currentTime + 0.1);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + sound.duration / 1000);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + sound.duration / 1000);
+    
+    // Animation entfernen
+    setTimeout(() => {
+        instrumentElement.classList.remove('playing');
+    }, sound.duration);
+    
+    // Partikel-Effekt
+    createParticles(instrumentElement);
+}
+
+function playAllInstruments() {
+    if (isPlayingAll) return;
+    
+    isPlayingAll = true;
+    const instruments = ['flugelhorn', 'flugelhorn2', 'tenorhorn', 'bass'];
+    
+    instruments.forEach((instrument, index) => {
+        setTimeout(() => {
+            playSound(instrument);
+        }, index * 300);
+    });
+    
+    setTimeout(() => {
+        isPlayingAll = false;
+    }, 3000);
+}
+
+function adjustVolume(value) {
+    currentVolume = value / 100;
+}
+
+// Partikel-Effekt
+function createParticles(element) {
+    const rect = element.getBoundingClientRect();
+    const particles = [];
+    
+    for (let i = 0; i < 10; i++) {
+        const particle = document.createElement('div');
+        particle.style.position = 'fixed';
+        particle.style.left = rect.left + rect.width / 2 + 'px';
+        particle.style.top = rect.top + rect.height / 2 + 'px';
+        particle.style.width = '4px';
+        particle.style.height = '4px';
+        particle.style.background = '#ffd700';
+        particle.style.borderRadius = '50%';
+        particle.style.pointerEvents = 'none';
+        particle.style.zIndex = '9999';
+        
+        document.body.appendChild(particle);
+        
+        const angle = (Math.PI * 2 * i) / 10;
+        const velocity = 2 + Math.random() * 3;
+        
+        let x = 0, y = 0;
+        const animate = () => {
+            x += Math.cos(angle) * velocity;
+            y += Math.sin(angle) * velocity;
+            
+            particle.style.transform = `translate(${x}px, ${y}px)`;
+            particle.style.opacity = Math.max(0, 1 - Math.abs(x + y) / 100);
+            
+            if (Math.abs(x) < 100 && Math.abs(y) < 100) {
+                requestAnimationFrame(animate);
+            } else {
+                document.body.removeChild(particle);
+            }
+        };
+        
+        animate();
+    }
+}
+
+// Countdown Timer
+function updateCountdown() {
+    const concertDate = new Date('2024-07-15T19:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = concertDate - now;
+    
+    if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+}
+
+// Countdown alle Sekunde aktualisieren
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Parallax Scrolling Effect
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.parallax-bg, .parallax-mountains, .parallax-clouds');
+    
+    parallaxElements.forEach((element, index) => {
+        const speed = (index + 1) * 0.5;
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});
