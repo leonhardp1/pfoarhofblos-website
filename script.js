@@ -230,7 +230,6 @@ errorStyle.textContent = `
 `;
 document.head.appendChild(errorStyle);
 
-// Modal Functions
 function openModal(modalId) {
     document.getElementById(modalId).style.display = 'block';
     document.body.style.overflow = 'hidden';
